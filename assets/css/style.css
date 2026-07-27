@@ -492,3 +492,59 @@ body{font-feature-settings:"palt" 1;letter-spacing:.01em}
   .line-cta h2{font-size:25px}
   .line-button-xl strong{font-size:22px}
 }
+
+
+.hero-copy-inner-refined{padding-right:8px}
+.hero-main-message{margin:0;font-size:clamp(44px,5.5vw,74px);line-height:1.05;letter-spacing:-.06em;font-weight:950;text-shadow:0 4px 18px rgba(0,33,92,.18)}
+.hero-main-message span{display:inline-block;color:#fff3bf}
+.hero-stat-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin:26px 0 20px}
+.hero-stat-card{position:relative;padding:18px 16px 16px;border-radius:18px;background:linear-gradient(180deg,rgba(105,203,236,.94),rgba(61,159,214,.96));border:1px solid rgba(255,255,255,.18);box-shadow:0 16px 34px rgba(0,34,95,.16);overflow:hidden}
+.hero-stat-card::after{content:"";position:absolute;inset:auto -18px -22px auto;width:82px;height:82px;border-radius:24px;background:radial-gradient(circle,rgba(255,255,255,.22) 0%,rgba(255,255,255,0) 70%)}
+.hero-stat-card span,.hero-stat-card strong,.hero-stat-card small{display:block;position:relative;z-index:1}
+.hero-stat-card span{color:#ffffff;font-size:15px;line-height:1.35;font-weight:900;letter-spacing:-.02em}
+.hero-stat-card strong{margin-top:4px;color:var(--yellow);font-size:54px;line-height:.92;font-weight:950;letter-spacing:-.06em;text-shadow:0 4px 0 rgba(0,55,136,.18)}
+.hero-stat-card small{display:inline;font-size:.48em;letter-spacing:-.02em;color:#fff6d2}
+.hero-support-text{margin:0 0 22px;color:#e5f0ff;font-size:16px;font-weight:700;line-height:1.8}
+
+@media(max-width:1080px){
+  .hero-main-message{font-size:clamp(42px,8vw,66px)}
+  .hero-stat-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+  .hero-stat-card strong{font-size:48px}
+}
+
+@media(max-width:760px){
+  .hero-copy-inner-refined{padding-right:0}
+  .hero-main-message{font-size:clamp(34px,10vw,48px);line-height:1.08}
+  .hero-stat-grid{grid-template-columns:1fr;gap:10px;margin:18px 0 16px}
+  .hero-stat-card{padding:14px 14px 13px;border-radius:14px}
+  .hero-stat-card span{font-size:14px}
+  .hero-stat-card strong{font-size:42px}
+  .hero-support-text{margin-bottom:18px;font-size:13px;line-height:1.75}
+}
+
+@media(max-width:390px){
+  .hero-main-message{font-size:32px}
+  .hero-stat-card strong{font-size:38px}
+}
+
+
+.section-campaign{padding-top:34px;background:linear-gradient(180deg,#f4f9ff 0%,#ffffff 100%)}
+.campaign-card{position:relative;overflow:hidden;padding:42px 28px 36px;border-radius:28px;text-align:center;background:linear-gradient(135deg,#1f87dd 0%,#0d71c8 45%,#1391bd 100%);box-shadow:0 24px 58px rgba(0,61,140,.16)}
+.campaign-card::before{content:"";position:absolute;top:-50px;right:-30px;width:180px;height:180px;border-radius:50%;background:radial-gradient(circle,rgba(255,255,255,.13) 0%,rgba(255,255,255,0) 70%)}
+.campaign-card::after{content:"";position:absolute;left:-40px;bottom:-70px;width:200px;height:200px;border-radius:50%;background:radial-gradient(circle,rgba(255,212,0,.12) 0%,rgba(255,212,0,0) 72%)}
+.campaign-pill,.campaign-lead,.campaign-card h2,.campaign-copy,.line-button-campaign{position:relative;z-index:1}
+.campaign-pill{display:inline-flex;align-items:center;gap:8px;padding:12px 22px;border-radius:999px;background:linear-gradient(180deg,#ffe57e,#ffd24d);color:#17356d;font-size:20px;font-weight:950;box-shadow:0 10px 24px rgba(0,35,93,.15)}
+.campaign-lead{margin:26px 0 8px;color:#ffffff;font-size:34px;font-weight:900;letter-spacing:-.04em}
+.campaign-card h2{margin:0;color:#ffd85b;font-size:clamp(56px,7vw,88px);line-height:1;font-weight:950;letter-spacing:-.06em;text-shadow:0 4px 0 rgba(10,77,155,.28)}
+.campaign-copy{margin:22px 0 0;color:#eef8ff;font-size:18px;line-height:1.85;font-weight:700}
+.line-button-campaign{display:inline-flex;align-items:center;justify-content:center;min-width:320px;min-height:60px;margin-top:26px;padding:0 28px;border-radius:999px;background:linear-gradient(135deg,#13d240,#00b341);color:#fff;font-weight:950;box-shadow:0 14px 30px rgba(0,156,59,.28)}
+
+@media(max-width:760px){
+  .section-campaign{padding-top:18px}
+  .campaign-card{padding:26px 16px 24px;border-radius:20px}
+  .campaign-pill{padding:10px 16px;font-size:16px}
+  .campaign-lead{margin:18px 0 6px;font-size:25px}
+  .campaign-card h2{font-size:52px}
+  .campaign-copy{margin-top:16px;font-size:15px;line-height:1.7}
+  .line-button-campaign{min-width:0;width:100%;min-height:56px;margin-top:20px;padding:0 18px}
+}
