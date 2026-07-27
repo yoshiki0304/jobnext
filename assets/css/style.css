@@ -28,9 +28,9 @@ button{cursor:pointer}
 
 .site-header{position:sticky;top:0;z-index:1000;background:rgba(255,255,255,.96);border-bottom:1px solid rgba(219,230,242,.85);backdrop-filter:blur(14px);transition:box-shadow .25s ease}
 .site-header.scrolled{box-shadow:0 10px 30px rgba(0,54,130,.09)}
-.header-inner{min-height:78px;display:flex;align-items:center;justify-content:space-between;gap:26px}
-.brand{display:block;width:285px;max-width:52vw}
-.brand img{width:100%}
+.header-inner{min-height:68px;display:flex;align-items:center;justify-content:space-between;gap:22px;padding-block:8px}
+.brand{display:block;width:250px;max-width:48vw;line-height:0}
+.brand img{display:block;width:100%;height:auto;max-height:52px;object-fit:contain;object-position:left center}
 .header-actions{display:flex;align-items:center;gap:16px}
 .header-phone{display:flex;flex-direction:column;text-align:right;line-height:1.15}
 .header-phone span{color:var(--muted);font-size:11px;font-weight:800;letter-spacing:.08em}
@@ -327,7 +327,7 @@ body{font-feature-settings:"palt" 1;letter-spacing:.01em}
 .section-heading p{font-size:15px;line-height:1.9}
 
 .site-header{box-shadow:0 1px 0 rgba(13,35,67,.06)}
-.header-inner{min-height:82px}
+.header-inner{min-height:68px}
 .line-button,.outline-button,.submit-button{letter-spacing:.01em}
 
 .hero-layout{min-height:680px}
@@ -381,8 +381,8 @@ body{font-feature-settings:"palt" 1;letter-spacing:.01em}
   .section-benefits .section-heading h2{font-size:clamp(20px,5.6vw,25px);line-height:1.22;letter-spacing:-.06em;white-space:nowrap}
 
   .site-header{position:relative}
-  .header-inner{min-height:70px;padding-block:8px}
-  .brand{width:215px;max-width:72vw}
+  .header-inner{min-height:60px;padding-block:6px}
+  .brand{width:190px;max-width:68vw}
 
   .hero{overflow:visible}
   .hero-copy-inner{width:calc(100% - 30px);padding:38px 0 34px}
@@ -548,3 +548,5 @@ body{font-feature-settings:"palt" 1;letter-spacing:.01em}
   .campaign-copy{margin-top:16px;font-size:15px;line-height:1.7}
   .line-button-campaign{min-width:0;width:100%;min-height:56px;margin-top:20px;padding:0 18px}
 }
+
+@media(max-width:760px){.brand img{max-height:42px}.site-header{min-height:0}}
