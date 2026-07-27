@@ -2,9 +2,9 @@
   'use strict';
 
   const header = document.querySelector('.site-header');
-  const onScroll = () => header?.classList.toggle('scrolled', window.scrollY > 12);
-  onScroll();
-  window.addEventListener('scroll', onScroll, { passive: true });
+  const updateHeader = () => header?.classList.toggle('scrolled', window.scrollY > 10);
+  updateHeader();
+  window.addEventListener('scroll', updateHeader, { passive: true });
 
   const revealItems = document.querySelectorAll('.reveal');
   if ('IntersectionObserver' in window) {
@@ -23,83 +23,76 @@
 
   document.querySelectorAll('a[href^="#"]').forEach((link) => {
     link.addEventListener('click', (event) => {
-      const id = link.getAttribute('href');
-      if (!id || id === '#') return;
-      const target = document.querySelector(id);
+      const selector = link.getAttribute('href');
+      if (!selector || selector === '#') return;
+      const target = document.querySelector(selector);
       if (!target) return;
       event.preventDefault();
-      const offset = window.innerWidth <= 760 ? 12 : 92;
+      const offset = window.innerWidth <= 760 ? 10 : 86;
       const top = target.getBoundingClientRect().top + window.scrollY - offset;
       window.scrollTo({ top, behavior: 'smooth' });
     });
   });
 
+  const popup = document.getElementById('linePopup');
+  const popupClose = popup?.querySelector('.line-popup-close');
+  let popupShown = false;
 
-  const linePopup = document.getElementById('linePopup');
-  const linePopupClose = linePopup?.querySelector('.line-popup-close');
-  let linePopupShown = false;
-
-  const hideLinePopup = () => {
-    if (!linePopup) return;
-    linePopup.classList.remove('is-visible');
-    linePopup.setAttribute('aria-hidden', 'true');
-    sessionStorage.setItem('linePopupDismissed', '1');
+  const showPopup = () => {
+    if (!popup || popupShown || sessionStorage.getItem('linePopupClosed') === '1') return;
+    popup.classList.add('is-visible');
+    popup.setAttribute('aria-hidden', 'false');
+    popupShown = true;
   };
 
-  const showLinePopup = () => {
-    if (!linePopup || linePopupShown || sessionStorage.getItem('linePopupDismissed') === '1') return;
-    linePopup.classList.add('is-visible');
-    linePopup.setAttribute('aria-hidden', 'false');
-    linePopupShown = true;
-  };
-
-  const checkLinePopup = () => {
+  const checkPopupPosition = () => {
     const scrollable = document.documentElement.scrollHeight - window.innerHeight;
     if (scrollable <= 0) return;
-    const progress = window.scrollY / scrollable;
-    if (progress >= 0.6) showLinePopup();
+    if (window.scrollY / scrollable >= 0.6) showPopup();
   };
 
-  linePopupClose?.addEventListener('click', hideLinePopup);
-  window.addEventListener('scroll', checkLinePopup, { passive: true });
-  window.addEventListener('load', checkLinePopup);
+  popupClose?.addEventListener('click', () => {
+    popup.classList.remove('is-visible');
+    popup.setAttribute('aria-hidden', 'true');
+    sessionStorage.setItem('linePopupClosed', '1');
+  });
+
+  window.addEventListener('scroll', checkPopupPosition, { passive: true });
+  window.addEventListener('load', checkPopupPosition);
 
   const form = document.querySelector('.entry-form');
   if (!form) return;
 
-  const markError = (field, hasError) => {
+  const setError = (field, hasError) => {
     const row = field.closest('.form-row');
-    if (row) row.classList.toggle('has-error', hasError);
+    row?.classList.toggle('has-error', hasError);
     field.setAttribute('aria-invalid', String(hasError));
   };
 
   form.addEventListener('submit', (event) => {
     let valid = true;
-    const required = form.querySelectorAll('[required]');
-
-    required.forEach((field) => {
+    form.querySelectorAll('[required]').forEach((field) => {
       const empty = field.type === 'checkbox' ? !field.checked : !field.value.trim();
-      markError(field, empty);
+      setError(field, empty);
       if (empty) valid = false;
     });
 
     const tel = form.querySelector('#tel');
-    if (tel && tel.value) {
+    if (tel?.value) {
       const normalized = tel.value.replace(/[\s()-]/g, '');
-      const invalidTel = !/^0\d{9,10}$/.test(normalized);
-      markError(tel, invalidTel);
-      if (invalidTel) valid = false;
+      const invalid = !/^0\d{9,10}$/.test(normalized);
+      setError(tel, invalid);
+      if (invalid) valid = false;
     }
 
     if (!valid) {
       event.preventDefault();
-      const firstError = form.querySelector('[aria-invalid="true"]');
-      firstError?.focus();
+      form.querySelector('[aria-invalid="true"]')?.focus();
     }
   });
 
-  form.querySelectorAll('input, select').forEach((field) => {
-    field.addEventListener('input', () => markError(field, false));
-    field.addEventListener('change', () => markError(field, false));
+  form.querySelectorAll('input,select').forEach((field) => {
+    field.addEventListener('input', () => setError(field, false));
+    field.addEventListener('change', () => setError(field, false));
   });
 })();
