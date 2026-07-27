@@ -242,10 +242,15 @@ button{cursor:pointer}
 @media(max-width:760px){
   .container{width:min(calc(100% - 24px),var(--container))}
   body{padding-bottom:66px}
-  .site-header{position:relative}
-  .header-inner{min-height:68px}
-  .brand{width:225px;max-width:70vw}
-  .header-actions{display:none}
+  .site-header{position:sticky;top:0;z-index:1205;background:#fff}
+  .header-inner{min-height:76px;gap:8px;padding-block:8px}
+  .brand{width:145px;max-width:42vw;flex:0 0 auto}
+  .brand img{width:100%;height:auto}
+  .header-actions{display:flex;align-items:center;gap:6px;margin-left:auto}
+  .header-phone{min-width:112px;text-align:center;padding:6px 8px;border-radius:10px;background:#f3f7fd;line-height:1.05}
+  .header-phone span{font-size:8px;letter-spacing:0}
+  .header-phone strong{font-size:13px;white-space:nowrap}
+  .line-button-small{min-height:42px;padding:8px 11px;border-radius:12px;font-size:11px;white-space:nowrap;box-shadow:none}
   .hero-copy-inner{width:calc(100% - 28px);padding:40px 0 30px}
   .hero-kicker{font-size:13px}
   .hero h1{font-size:46px}
@@ -406,7 +411,7 @@ body{font-feature-settings:"palt" 1;letter-spacing:.01em}
   .hero-mini-label{min-width:104px;padding:8px 10px;border-radius:11px}
   .hero-mini-label strong{font-size:14px}
   .hero-mini-label span{font-size:9px}
-  .hero-mini-label-one{left:12px;top:16px}
+  .hero-mini-label-one{left:12px;top:auto;bottom:116px}
   .hero-mini-label-two{left:12px;bottom:20px}
 
   .support-strip{margin-top:0;padding:24px 14px 18px;border-radius:0;border-left:0;border-right:0;box-shadow:none}
@@ -487,6 +492,7 @@ body{font-feature-settings:"palt" 1;letter-spacing:.01em}
   .support-badge strong{font-size:40px;margin-top:10px}
   .support-badge small{font-size:16px}
   .hero-mini-label-two{bottom:14px}
+  .hero-mini-label-one{bottom:104px}
   .section-heading h2{font-size:27px}
   .section-benefits .section-heading h2{font-size:20px}
   .line-cta h2{font-size:25px}
@@ -550,3 +556,12 @@ body{font-feature-settings:"palt" 1;letter-spacing:.01em}
 }
 
 @media(max-width:760px){.brand img{max-height:42px}.site-header{min-height:0}}
+
+@media(max-width:390px){
+  .header-inner{min-height:72px;gap:5px}
+  .brand{width:125px;max-width:38vw}
+  .header-phone{min-width:100px;padding:5px 6px}
+  .header-phone span{font-size:7px}
+  .header-phone strong{font-size:12px}
+  .line-button-small{min-height:40px;padding:7px 8px;font-size:10px}
+}
