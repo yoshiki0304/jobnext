@@ -57,7 +57,7 @@
     const scrollable = document.documentElement.scrollHeight - window.innerHeight;
     if (scrollable <= 0) return;
     const progress = window.scrollY / scrollable;
-    if (progress >= 0.8) showLinePopup();
+    if (progress >= 0.6) showLinePopup();
   };
 
   linePopupClose?.addEventListener('click', hideLinePopup);
