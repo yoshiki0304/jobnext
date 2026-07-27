@@ -253,7 +253,7 @@ button{cursor:pointer}
   .hero-list li{font-size:14px}
   .line-button-large{min-width:0;width:100%}
   .outline-button{width:100%}
-  .hero-photo-panel>img{min-height:410px;object-position:center}
+  .hero-photo-panel>img{min-height:440px;object-position:64% center}
   .support-badge{right:3%;bottom:4%;width:142px;height:142px;border-width:3px}
   .support-badge span{font-size:17px}
   .support-badge strong{margin-top:14px;font-size:52px}
@@ -295,4 +295,18 @@ button{cursor:pointer}
   .mobile-fixed a:last-child{background:linear-gradient(135deg,#12d641,var(--green-deep))}
   .mobile-fixed span{font-size:10px;font-weight:800}
   .mobile-fixed strong{font-size:15px}
+}
+
+@media(max-width:420px){
+  .hero-photo-panel>img{min-height:460px;object-position:68% center}
+  .support-badge{right:2%;bottom:4%}
+}
+
+
+.section-manga{background:#fff}
+.manga-panel{padding:16px;border-radius:28px;background:linear-gradient(180deg,#ffffff,#f6f9ff);border:1px solid var(--line);box-shadow:0 18px 46px rgba(0,42,105,.08)}
+.manga-panel img{display:block;width:100%;height:auto;border-radius:18px}
+@media(max-width:760px){
+  .manga-panel{padding:10px;border-radius:18px}
+  .manga-panel img{border-radius:12px}
 }
