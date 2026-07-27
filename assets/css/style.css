@@ -288,7 +288,9 @@ button{cursor:pointer}
   .company-list dd{padding-top:5px}
   .footer-inner{grid-template-columns:1fr}
   .footer-inner nav{justify-content:flex-start}
-  .line-popup{right:10px;left:10px;bottom:76px;width:auto;padding:18px 16px 15px}
+  .line-popup{top:50%;left:50%;right:auto;bottom:auto;width:min(92vw,360px);padding:18px 16px 15px;transform:translate(-50%,-46%)}
+  .line-popup.is-visible{transform:translate(-50%,-50%)}
+  .line-popup{max-height:80vh;overflow:auto;box-shadow:0 24px 60px rgba(0,42,105,.28)}
   .mobile-fixed{position:fixed;left:0;right:0;bottom:0;z-index:1200;display:grid;grid-template-columns:1fr 1fr;height:66px;box-shadow:0 -8px 25px rgba(0,42,105,.2)}
   .mobile-fixed a{display:flex;flex-direction:column;align-items:center;justify-content:center;line-height:1.25;color:#fff}
   .mobile-fixed a:first-child{background:var(--blue-dark)}
@@ -376,6 +378,7 @@ body{font-feature-settings:"palt" 1;letter-spacing:.01em}
   .section-heading>span{font-size:10px;letter-spacing:.16em}
   .section-heading h2{font-size:clamp(27px,8vw,34px);line-height:1.35;word-break:keep-all;overflow-wrap:anywhere}
   .section-heading p{font-size:13px;line-height:1.8}
+  .section-benefits .section-heading h2{font-size:clamp(20px,5.6vw,25px);line-height:1.22;letter-spacing:-.06em;white-space:nowrap}
 
   .site-header{position:relative}
   .header-inner{min-height:70px;padding-block:8px}
@@ -484,6 +487,7 @@ body{font-feature-settings:"palt" 1;letter-spacing:.01em}
   .support-badge small{font-size:16px}
   .hero-mini-label-two{bottom:14px}
   .section-heading h2{font-size:27px}
+  .section-benefits .section-heading h2{font-size:20px}
   .line-cta h2{font-size:25px}
   .line-button-xl strong{font-size:22px}
 }
