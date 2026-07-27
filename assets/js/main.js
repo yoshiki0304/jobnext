@@ -34,6 +34,36 @@
     });
   });
 
+
+  const linePopup = document.getElementById('linePopup');
+  const linePopupClose = linePopup?.querySelector('.line-popup-close');
+  let linePopupShown = false;
+
+  const hideLinePopup = () => {
+    if (!linePopup) return;
+    linePopup.classList.remove('is-visible');
+    linePopup.setAttribute('aria-hidden', 'true');
+    sessionStorage.setItem('linePopupDismissed', '1');
+  };
+
+  const showLinePopup = () => {
+    if (!linePopup || linePopupShown || sessionStorage.getItem('linePopupDismissed') === '1') return;
+    linePopup.classList.add('is-visible');
+    linePopup.setAttribute('aria-hidden', 'false');
+    linePopupShown = true;
+  };
+
+  const checkLinePopup = () => {
+    const scrollable = document.documentElement.scrollHeight - window.innerHeight;
+    if (scrollable <= 0) return;
+    const progress = window.scrollY / scrollable;
+    if (progress >= 0.8) showLinePopup();
+  };
+
+  linePopupClose?.addEventListener('click', hideLinePopup);
+  window.addEventListener('scroll', checkLinePopup, { passive: true });
+  window.addEventListener('load', checkLinePopup);
+
   const form = document.querySelector('.entry-form');
   if (!form) return;
 
