@@ -97,3 +97,104 @@
 .campaign{padding:56px 18px;background:#f4fbff}.campaign__card{width:min(1120px,100%);padding:36px 34px;border-width:10px;border-radius:16px}.campaign__card--trend .campaign__ribbon{font-size:44px;padding:14px 40px;border-radius:999px}.campaign__money-wrap{gap:18px;margin-top:16px}.campaign__sub{font-size:46px;padding:10px 22px}.campaign__card h2{font-size:152px}.campaign__card h2 strong{font-size:1.55em}.campaign__cash{font-size:56px}.campaign__headline{font-size:88px;-webkit-text-stroke:6px #0a3f99}.campaign__note{font-size:22px}.campaign__bottom{font-size:56px;padding:20px 26px}
 @media(max-width:980px){.header__inner{height:82px}.header__line{min-width:300px;padding:16px 22px;font-size:16px}.hero{min-height:1320px}.hero__inner{min-height:1320px;padding:30px 0 40px}.hero__copy{width:62%;padding-top:24px}.hero__top-badges{gap:18px}.seal-badge{width:180px}.seal-badge strong{font-size:52px}.hero__eyebrow{font-size:22px}.hero__pain-points span{font-size:28px}.hero__title-trendy{font-size:88px}.hero__lead{font-size:22px}.btn{font-size:32px;min-height:82px}.btn small{font-size:18px}.btn--mail,.btn--line{min-width:0}.campaign__card--trend .campaign__ribbon{font-size:30px}.campaign__card h2{font-size:110px}.campaign__headline{font-size:62px}.campaign__bottom{font-size:36px}}
 @media(max-width:680px){.header__inner{width:calc(100% - 14px);height:76px;gap:10px}.header__logo img{width:124px;height:28px}.header__line{min-width:0;width:auto;padding:10px 16px;font-size:14px}.hero{min-height:1210px}.hero__inner{width:calc(100% - 12px);min-height:1210px;padding:20px 0 26px}.hero__top-badges{gap:8px;margin-bottom:18px}.seal-badge{width:31.5vw;max-width:128px}.seal-badge small{top:7px;left:7px;right:7px;padding:5px 0;font-size:11px;border-radius:6px}.seal-badge strong{margin-top:10px;font-size:26px;-webkit-text-stroke:2px #fff;text-shadow:0 4px 0 rgba(0,54,136,.14)}.hero__copy{width:100%;padding-top:10px}.hero__eyebrow{margin-bottom:16px;padding:10px 14px;font-size:13px;line-height:1.35;border-radius:8px}.hero__pain-points{max-width:48%;gap:10px;margin-bottom:22px}.hero__pain-points span{padding:9px 12px;border-width:3px;border-radius:12px;font-size:18px;line-height:1.15}.hero__title-trendy{font-size:64px;line-height:.92;text-shadow:-3px -3px 0 #1147c7,3px -3px 0 #1147c7,-3px 3px 0 #1147c7,3px 3px 0 #1147c7,0 7px 0 rgba(17,71,199,.22)}.hero__title-trendy span{margin-top:6px}.hero__lead{max-width:100%;margin-top:20px;font-size:17px;line-height:1.7}.hero__actions{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:26px}.btn{min-height:84px;padding:10px 12px;border-radius:16px;font-size:18px}.btn small{font-size:11px;margin-bottom:3px}.hero__photo img{object-position:66% center}.hero__overlay{background:linear-gradient(180deg,rgba(0,73,177,.52) 0 26%,rgba(0,84,187,.2) 50%,rgba(0,96,206,.22) 100%),linear-gradient(90deg,rgba(0,67,168,.58) 0 42%,rgba(0,84,187,.14) 62%,rgba(0,96,206,.06) 100%)}.campaign{padding:30px 10px}.campaign__card{padding:20px 12px;border-width:5px;border-radius:12px}.campaign__card--trend .campaign__ribbon{font-size:18px;padding:10px 16px}.campaign__money-wrap{gap:8px}.campaign__sub{font-size:20px;padding:6px 10px;border-radius:10px}.campaign__card h2{font-size:84px;line-height:.88}.campaign__card h2 strong{font-size:1.4em}.campaign__cash{font-size:28px;letter-spacing:-4px}.campaign__headline{font-size:42px;line-height:1.05;-webkit-text-stroke:2px #0a3f99}.campaign__note{font-size:12px;line-height:1.65}.campaign__bottom{min-width:100%;font-size:24px;padding:12px 10px;border-width:3px}}
+
+/* =========================================================
+   MOBILE ONLY LP — 2026-07-31
+   PCでもスマホ幅で中央表示する専用レイアウト
+========================================================= */
+html{background:#edf3f8}
+body{width:min(100%,680px);margin:0 auto;overflow-x:hidden;background:#fff;box-shadow:0 0 42px rgba(0,38,90,.14)}
+.header{position:sticky;top:0;z-index:1000;width:100%;background:#fff;border-bottom:1px solid #e5edf6;box-shadow:0 5px 18px rgba(0,48,112,.08)}
+.header__inner{width:100%;height:68px;padding:8px 12px;gap:10px}
+.header__logo{flex:0 0 auto;min-width:0}
+.header__logo img{width:142px;height:38px;object-fit:contain}
+.header__nav{display:none!important}
+.header__line{margin-left:auto;min-width:0;padding:11px 16px;border-radius:999px;font-size:13px;line-height:1.2;white-space:nowrap;box-shadow:0 8px 20px rgba(8,200,65,.25)}
+
+.hero{min-height:0;background:#075bc5;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 15% 20%,rgba(255,255,255,.2) 0 2px,transparent 3px) 0 0/44px 44px;opacity:.8;z-index:1;pointer-events:none}
+.hero__photo{position:absolute;inset:0}
+.hero__photo img{width:100%;height:100%;object-fit:cover;object-position:67% center;filter:saturate(1.05) brightness(1.04)}
+.hero__overlay{position:absolute;inset:0;background:linear-gradient(180deg,rgba(1,75,174,.32) 0 28%,rgba(0,71,169,.18) 48%,rgba(0,64,155,.72) 78%,rgba(0,49,128,.94) 100%),linear-gradient(90deg,rgba(0,72,170,.55) 0 48%,rgba(0,72,170,.08) 78%)}
+.hero__inner{position:relative;z-index:2;width:100%;min-height:1040px;padding:20px 12px 28px;display:flex;flex-direction:column;align-items:stretch;justify-content:flex-start}
+.hero__top-badges{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:7px;width:100%;margin:0 0 20px}
+.seal-badge{width:100%;aspect-ratio:1/1;min-width:0;box-shadow:0 10px 20px rgba(0,50,130,.2)}
+.seal-badge small{top:7px;left:7px;right:7px;padding:6px 2px;border-radius:7px;font-size:12px;line-height:1.05}
+.seal-badge strong{margin-top:13px;font-size:27px;line-height:.92;-webkit-text-stroke:2px #fff;text-shadow:0 4px 0 rgba(0,54,136,.14)}
+.hero__copy{width:100%;padding:0;text-align:left;color:#fff}
+.hero__eyebrow{margin:0 0 15px;padding:10px 13px;border-radius:8px;font-size:13px;line-height:1.45;transform:skew(-7deg);box-shadow:0 8px 18px rgba(0,32,89,.14)}
+.hero__pain-points{width:52%;max-width:none;gap:9px;margin:0 0 24px}
+.hero__pain-points span{padding:10px 12px;border:3px solid #0846b6;border-radius:12px;font-size:18px;line-height:1.12;box-shadow:0 8px 18px rgba(0,30,100,.18)}
+.hero__title-trendy{margin-top:278px;font-size:61px;line-height:.92;letter-spacing:-.075em;text-shadow:-3px -3px 0 #1147c7,3px -3px 0 #1147c7,-3px 3px 0 #1147c7,3px 3px 0 #1147c7,0 7px 0 rgba(17,71,199,.22)}
+.hero__title-trendy strong{color:#ffe000}
+.hero__title-trendy span{margin-top:7px;color:#fff}
+.hero__lead{max-width:none;margin:21px 0 0;font-size:16px;line-height:1.75;font-weight:900;color:#fff;text-shadow:0 2px 10px rgba(0,32,90,.3)}
+.hero__actions{display:grid;grid-template-columns:1fr 1.35fr;gap:10px;margin-top:24px}
+.btn{min-width:0!important;width:100%;min-height:78px;padding:9px 9px;border-radius:15px;font-size:18px;line-height:1.15;box-shadow:0 10px 24px rgba(0,39,104,.2)}
+.btn small{font-size:10px;margin-bottom:4px}
+
+.campaign{padding:28px 10px;background:#f4fbff}
+.campaign__card{width:100%;padding:20px 12px 17px;border:5px solid #fff;border-radius:12px}
+.campaign__card--trend .campaign__ribbon{font-size:18px;padding:10px 15px}
+.campaign__money-wrap{gap:8px;margin-top:14px}
+.campaign__sub{font-size:20px;padding:6px 10px;border-radius:10px}
+.campaign__card h2{font-size:82px;line-height:.88}
+.campaign__card h2 strong{font-size:1.42em}
+.campaign__cash{font-size:26px;letter-spacing:-4px}
+.campaign__headline{font-size:41px;line-height:1.03;-webkit-text-stroke:2px #0a3f99}
+.campaign__note{font-size:12px;line-height:1.7}
+.campaign__bottom{min-width:100%;margin-top:15px;padding:12px 8px;border-width:3px;font-size:23px}
+
+.section{padding:58px 14px}
+.section__head{margin-bottom:28px}
+.section__head span{font-size:11px}
+.section__head h2{font-size:29px;line-height:1.28}
+.section__head p{font-size:13px}
+.problems__grid,.support__grid,.jobs__grid,.flow__grid{grid-template-columns:1fr;gap:14px}
+.problems__grid div{padding:18px 14px;font-size:16px;border-radius:14px}
+.problems__message{margin-top:24px;padding:22px 16px;border-radius:18px}
+.problems__message strong{font-size:22px}
+.support article,.jobs article{border-radius:18px}
+.support article img{height:190px}
+.jobs article img{height:210px}
+.support article h3{margin:16px 16px 7px}
+.support article p{padding:0 16px 20px}
+.jobs article>div{padding:17px}
+.compare__table{border-radius:14px;overflow-x:auto}
+.compare__row{min-width:560px;grid-template-columns:.8fr 1fr 1.15fr}
+.compare__row div{padding:12px 8px;font-size:12px}
+.flow li{padding:22px;border-radius:16px}
+.manga__frame{padding:8px;border-radius:14px}
+.manga__frame img{border-radius:9px}
+.faq__list{gap:10px}
+.faq details{border-radius:13px}
+.faq summary{padding:17px 15px;font-size:14px}
+.faq details p{padding:0 15px 17px;font-size:13px}
+.contact{grid-template-columns:1fr;gap:26px;padding:58px 14px}
+.contact__copy h2{font-size:29px}
+.contact__copy a{font-size:28px}
+.contact__form{padding:22px 15px;border-radius:18px}
+.contact__form input,.contact__form select{font-size:16px}
+footer{padding:34px 18px 90px}
+footer img{width:220px}
+
+.fixed-cta{left:50%;right:auto;width:min(100%,680px);transform:translateX(-50%);display:flex;height:66px}
+.line-popup{top:50%;left:50%;right:auto;bottom:auto;width:min(calc(100% - 28px),360px);max-height:80vh;overflow:auto;transform:translate(-50%,-46%)}
+.line-popup.is-visible{transform:translate(-50%,-50%)}
+
+@media(max-width:390px){
+  .header__logo img{width:122px}
+  .header__line{padding:10px 12px;font-size:12px}
+  .hero__inner{min-height:980px;padding-inline:10px}
+  .seal-badge small{font-size:10px}
+  .seal-badge strong{font-size:23px}
+  .hero__eyebrow{font-size:12px}
+  .hero__pain-points{width:56%}
+  .hero__pain-points span{font-size:16px}
+  .hero__title-trendy{margin-top:245px;font-size:54px}
+  .hero__lead{font-size:14px}
+  .btn{font-size:16px;min-height:72px}
+  .campaign__card h2{font-size:72px}
+  .campaign__headline{font-size:35px}
+  .campaign__bottom{font-size:20px}
+}
