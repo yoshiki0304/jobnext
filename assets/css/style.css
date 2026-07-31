@@ -233,3 +233,6 @@ body{width:min(100%,680px);margin:0 auto;overflow-x:hidden;background:#fff;box-s
 .manga .section__head{margin-bottom:18px}
 .manga .section__head h2{font-size:27px}
 @media(max-width:390px){.header__logo img{width:152px!important;height:40px!important}.header__line{padding:10px 14px!important;font-size:13px!important}.hero{min-height:1040px}.hero__photo{inset:88px -4px 190px 34%}.hero__inner{min-height:1040px;padding-inline:10px}.seal-badge small{font-size:12px!important}.seal-badge strong{font-size:30px!important}.hero__pain-points{width:60%}.hero__title-trendy{margin-top:286px!important;font-size:60px!important}.support article img{height:215px!important}.flow li b{width:64px!important;height:64px!important;font-size:22px!important}}
+
+/* Spam prevention honeypot */
+.hp-field{position:absolute!important;left:-9999px!important;width:1px!important;height:1px!important;opacity:0!important;pointer-events:none!important}

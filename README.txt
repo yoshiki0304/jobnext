@@ -4,7 +4,8 @@
 1. ZIPを解凍
 2. siteフォルダ内の index.html / assets / send-mail.php / thanks.html 等をGitHubまたはサーバーへアップロード
 3. LINE URL（@yourlineid）を実際の公式LINE URLへ変更
-4. GitHub PagesではPHPフォーム送信は動作しません。フォーム本番利用はXServer等へ設置してください。
+4. フォーム受信先は info@next-ji.jp に設定済み
+5. GitHub PagesではPHPフォーム送信は動作しません。フォーム本番利用はXServer等へ設置してください。
 
 - ファーストビューを最新トレンド寄りに全面刷新（派手なシールバッジ、黄色訴求バー、太字見出し）
 - キャンペーン帯を今風の強い販促ビジュアルに変更
