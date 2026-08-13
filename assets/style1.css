@@ -18,3 +18,19 @@
   .hero-reference-inner{grid-template-columns:minmax(0,1fr) 135px!important;}
   .hero-person img{height:330px!important;transform:translateX(28px)!important;}
 }
+
+
+/* Three top pills: force one row */
+.hero-reference .hero-pills{
+  display:flex;
+  flex-wrap:nowrap!important;
+  gap:8px;
+  width:100%;
+  max-width:420px;
+}
+.hero-reference .hero-pills span{
+  flex:1 1 0;
+  min-width:0!important;
+  padding:12px 10px;
+  white-space:nowrap;
+}
