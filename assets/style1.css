@@ -34,3 +34,25 @@
   padding:12px 10px;
   white-space:nowrap;
 }
+
+
+/* Larger/taller top pills while keeping one row */
+.hero-reference .hero-pills{
+  display:flex!important;
+  flex-wrap:nowrap!important;
+  gap:10px!important;
+  width:100%!important;
+  max-width:470px!important;
+}
+.hero-reference .hero-pills span{
+  flex:1 1 0!important;
+  min-width:0!important;
+  min-height:82px!important;
+  padding:20px 8px!important;
+  display:flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  font-size:18px!important;
+  line-height:1.15!important;
+  white-space:nowrap!important;
+}
