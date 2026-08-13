@@ -1,0 +1,24 @@
+/* Hero worker size override - loaded last */
+.hero-person{overflow:visible!important;}
+.hero-person img{
+  height:690px!important;
+  width:auto!important;
+  max-width:none!important;
+  transform:translateX(42px)!important;
+  object-fit:contain!important;
+  object-position:right bottom!important;
+}
+@media(max-width:700px){
+  .hero-person img{
+    height:440px!important;
+    width:auto!important;
+    transform:translateX(36px)!important;
+  }
+}
+@media(max-width:520px){
+  .hero-person img{
+    height:375px!important;
+    width:auto!important;
+    transform:translateX(30px)!important;
+  }
+}
