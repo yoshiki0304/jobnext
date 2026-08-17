@@ -59,3 +59,14 @@
 
 @media(max-width:700px){.brand-logo img{height:56px;max-width:170px;}}
 @media(max-width:420px){.brand-logo img{height:50px;max-width:145px;}}
+
+
+/* responsive photo full-view fix */
+@media(min-width:761px){.support-main img{height:300px}.support-card img{height:180px}}
+@media(max-width:520px){.support-main img{height:210px}.support-card img{height:120px}}
+@media(max-width:370px){.support-main img{height:190px}.support-card img{height:108px}}
+
+
+@media(max-width:700px){.brand-name-text{font-size:18px;}}
+@media(max-width:520px){.brand-name-text{font-size:16px;}}
+@media(max-width:420px){.brand-name-text{font-size:14px;}}

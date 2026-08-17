@@ -63,3 +63,12 @@
 /* official logo */
 .brand-logo{display:flex;align-items:center;height:100%;}
 .brand-logo img{display:block;width:auto;height:64px;max-width:210px;object-fit:contain;}
+
+
+/* photo full-view fix */
+.support-main{display:flex;flex-direction:column}.support-main img{height:260px;object-fit:contain;object-position:center center;background:#f6f3ef;padding:8px}.support-card{display:flex;flex-direction:column}.support-card img{height:160px;object-fit:contain;object-position:center center;background:#f6f3ef;padding:8px}
+
+
+/* brand name text */
+.brand-logo{gap:10px;}
+.brand-name-text{display:block;font-size:24px;font-weight:950;line-height:1.15;color:#4a2b18;letter-spacing:.02em;white-space:nowrap;}
