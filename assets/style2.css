@@ -53,3 +53,6 @@
 }
 
 @media(max-width:700px){.hero-bonus{min-width:0;width:100%;margin:16px 0 16px;padding:17px 12px 17px;transform:scale(1)}.hero-bonus small{font-size:15px;margin-top:-27px}.hero-bonus-main{font-size:27px}.hero-bonus-gift{font-size:24px}}
+
+@media(max-width:700px){.jobit-style{padding:28px 14px 28px}.jobit-headline p{font-size:23px}.jobit-headline h2{font-size:28px}.jobit-support-card{grid-template-columns:1fr}.jobit-support-label{font-size:20px;padding:18px 14px}.jobit-support-label::after{display:none}.jobit-support-grid div{min-height:64px;font-size:19px}.jobit-cta-panel{grid-template-columns:1fr;gap:10px;padding:14px}.jobit-cta-copy strong{text-align:center;font-size:22px}.jobit-big-line{min-height:78px}.jobit-big-line small{font-size:13px}.jobit-big-line span{font-size:22px}}
+@media(max-width:520px){.jobit-headline p{font-size:20px}.jobit-headline h2{font-size:24px}.jobit-support-label{font-size:18px}.jobit-support-grid div{font-size:17px;min-height:58px;padding:8px 6px}.jobit-cta-copy strong{font-size:20px}.jobit-big-line span{font-size:19px}}
