@@ -72,3 +72,7 @@
 /* brand name text */
 .brand-logo{gap:10px;}
 .brand-name-text{display:block;font-size:24px;font-weight:950;line-height:1.15;color:#4a2b18;letter-spacing:.02em;white-space:nowrap;}
+
+
+/* privacy footer link */
+.footer-privacy-link{display:block;width:max-content;margin:16px auto 10px;padding-bottom:2px;color:#fff;font-size:12px;font-weight:800;border-bottom:1px solid rgba(255,255,255,.7);transition:opacity .2s ease}.footer-privacy-link:hover{opacity:.72}
