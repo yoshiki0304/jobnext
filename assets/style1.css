@@ -76,3 +76,7 @@
 
 /* privacy footer link */
 .footer-privacy-link{display:block;width:max-content;margin:16px auto 10px;padding-bottom:2px;color:#fff;font-size:12px;font-weight:800;border-bottom:1px solid rgba(255,255,255,.7);transition:opacity .2s ease}.footer-privacy-link:hover{opacity:.72}
+
+
+/* top hero image replacement */
+.hero-top-image{background:#fff;padding:0;margin:0;line-height:0}.hero-top-image img{display:block;width:100%;height:auto}.hero-top-image + .hero-strip{margin-top:0}

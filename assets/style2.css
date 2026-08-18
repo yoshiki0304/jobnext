@@ -70,3 +70,6 @@
 @media(max-width:700px){.brand-name-text{font-size:18px;}}
 @media(max-width:520px){.brand-name-text{font-size:16px;}}
 @media(max-width:420px){.brand-name-text{font-size:14px;}}
+
+
+@media(max-width:700px){.hero-top-image{margin:0}.hero-top-image img{width:100%;height:auto}}
