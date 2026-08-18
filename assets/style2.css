@@ -72,6 +72,9 @@
 @media(max-width:420px){.brand-name-text{font-size:14px;}}
 
 
+@media(max-width:700px){.hero-top-image{margin:0}.hero-top-image img{width:100%;height:auto}}
+
+
 @media(max-width:700px){.brand-logo-wide img{height:54px;max-width:320px;}}
 @media(max-width:520px){.header{padding:0 10px}.brand-logo-wide img{height:42px;max-width:220px}.header-line-lg{min-width:108px;}}
 @media(max-width:400px){.brand-logo-wide img{height:38px;max-width:190px}.header-line{font-size:9px;padding:7px 9px}.header-line-lg{min-width:100px;}}
